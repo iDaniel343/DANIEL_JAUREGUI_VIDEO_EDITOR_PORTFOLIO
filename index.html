@@ -32,8 +32,6 @@
             font-size: 1.1rem;
             letter-spacing: 2px;
         }
-
-        /* Sobrescribir el acento info de Bootstrap por gris */
         .text-info {
             color: var(--accent-gray-light) !important;
         }
@@ -56,6 +54,35 @@
             background-color: var(--accent-gray-dark) !important;
             color: #fff !important;
         }
+        
+        /* Ajustes específicos para video vertical y textos laterales */
+        .ratio-9x16 {
+            --bs-aspect-ratio: 177.77%;
+        }
+        .metric-badge {
+            font-size: 0.8rem;
+            background: rgba(255,255,255,0.05);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .highlight-tag {
+            color: var(--accent-gray-light);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+        .video-title-primary {
+            font-size: 1.25rem;
+            color: #ffffff;
+            margin-bottom: 2px;
+        }
+        .video-title-secondary {
+            font-size: 0.95rem;
+            color: var(--accent-gray-light);
+            font-weight: 400;
+        }
     </style>
 </head>
 <body class="bg-dark text-light p-3 pt-5">
@@ -75,238 +102,509 @@
     <main class="container mb-5">
         <div class="row justify-content-center">
             <div class="col-12 col-xl-11">
+
+                <!-- SECCIÓN: MÁXIMO RENDIMIENTO -->
+                <div class="row mb-4">
+                    <div class="col-12 border-start border-info border-3 ps-3 ms-2 ms-md-0">
+                        <h2 class="category-title text-info text-uppercase m-0">Destacados: Mejores Métricas</h2>
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <!-- Top 1 Métricas -->
+                    <div class="col-12 col-md-6 row align-items-center g-3">
+                        <div class="col-5 col-sm-4">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7265039706105072902?rel=0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-7 col-sm-8 ps-3">
+                            <span class="highlight-tag d-block mb-1">★ Top 1 Rendimiento</span>
+                            <h3 class="video-title-primary text-uppercase m-0">¿Cuál es tu videojuego favorito?</h3>
+                            <div class="mt-2">
+                                <span class="d-block text-white-50 small mb-1">Publicación: 08-AGO-23</span>
+                                <div class="d-flex flex-wrap gap-2 mt-2">
+                                    <span class="metric-badge">519.7K Views</span>
+                                    <span class="metric-badge">68.9K Likes</span>
+                                    <span class="metric-badge">+6.5K Favs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Top 2 Métricas -->
+                    <div class="col-12 col-md-6 row align-items-center g-3">
+                        <div class="col-5 col-sm-4">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7266153066880191749?rel=0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-7 col-sm-8 ps-3">
+                            <span class="highlight-tag d-block mb-1">★ Top 2 Rendimiento</span>
+                            <h3 class="video-title-primary text-uppercase m-0">Más de 10,000 votaron</h3>
+                            <div class="mt-2">
+                                <span class="d-block text-white-50 small mb-1">Publicación: 11-AGO-23</span>
+                                <div class="d-flex flex-wrap gap-2 mt-2">
+                                    <span class="metric-badge">413.4K Views</span>
+                                    <span class="metric-badge">65.1K Likes</span>
+                                    <span class="metric-badge">+7.3K Favs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- SECCIÓN: EXCELENCIA TÉCNICA -->
+                <div class="row mb-4">
+                    <div class="col-12 border-start border-info border-3 ps-3 ms-2 ms-md-0">
+                        <h2 class="category-title text-info text-uppercase m-0">Destacados: Mejor Editados</h2>
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <!-- Top 1 Edición -->
+                    <div class="col-12 col-md-6 row align-items-center g-3">
+                        <div class="col-5 col-sm-4">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7597982436563193109?rel=0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-7 col-sm-8 ps-3">
+                            <span class="highlight-tag d-block mb-1">#1 Mejor Editado</span>
+                            <h3 class="video-title-primary text-uppercase m-0">El diseño de niveles de Halo 3</h3>
+                            <div class="mt-2">
+                                <span class="d-block text-white-50 small mb-1">Publicación: 21-ENE-26</span>
+                                <div class="d-flex flex-wrap gap-2 mt-2">
+                                    <span class="metric-badge">4.6K Views</span>
+                                    <span class="metric-badge">789 Likes</span>
+                                    <span class="metric-badge">+140 Favs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Top 2 Edición -->
+                    <div class="col-12 col-md-6 row align-items-center g-3">
+                        <div class="col-5 col-sm-4">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <div class="w-100 h-100 d-flex align-items-center justify-content-center bg-secondary bg-opacity-20 text-center p-2" style="font-size:0.75rem;">Fichero de Producción (Drive)</div>
+                            </div>
+                        </div>
+                        <div class="col-7 col-sm-8 ps-3">
+                            <span class="highlight-tag d-block mb-1">#2 Mejor Editado (Versión Extendida)</span>
+                            <h3 class="video-title-primary text-uppercase m-0">Analizando armamento de videojuegos</h3>
+                            <span class="video-title-secondary d-block text-uppercase">Halo: MA40</span>
+                            <div class="mt-2">
+                                <span class="d-block text-white-50 small mb-1">Publicación: 06-MAR-26</span>
+                                <a href="https://drive.google.com/file/d/1vE7LOonJuOObFQ-dKaF-z5FPaMoTrjKm/view?usp=sharing" target="_blank" class="btn btn-xs btn-outline-info py-0 px-2 mt-1" style="font-size:0.75rem;">Ver Versión Extendida</a>
+                                <div class="d-flex flex-wrap gap-2 mt-2">
+                                    <span class="metric-badge">7.2K Views</span>
+                                    <span class="metric-badge">1.2K Likes</span>
+                                    <span class="metric-badge">+300 Favs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- CATEGORÍA: VIDEOS DE PROMOCIÓN DE PRODUCTO -->
+                <div class="row mb-3">
+                    <div class="col-12 border-start border-info border-3 ps-3 ms-2 ms-md-0">
+                        <h2 class="category-title text-info text-uppercase m-0">Videos de Promoción de Producto</h2>
+                    </div>
+                </div>
                 
+                <div class="row g-4 mb-5">
+                    <!-- Item 1 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7602751958671265044?rel=0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <h3 class="video-title-primary text-uppercase m-0">Mochila Legendaria Halo</h3>
+                            <span class="video-title-secondary d-block text-uppercase">Yadatex</span>
+                            <span class="text-white-50 small d-block mt-1">Lanzamiento: 03-FEB-26</span>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">100.7K Views</span>
+                                <span class="metric-badge">6.1K Likes</span>
+                                <span class="metric-badge">+1.4K Favs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <div class="w-100 h-100 d-flex align-items-center justify-content-center bg-secondary bg-opacity-20 text-center p-2" style="font-size:0.75rem;">Fichero Activo Comercial</div>
+                            </div>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <h3 class="video-title-primary text-uppercase m-0">Mochila Batman Classic</h3>
+                            <span class="video-title-secondary d-block text-uppercase">Yadatex</span>
+                            <span class="text-white-50 small d-block mt-1">Lanzamiento: 15-FEB-26</span>
+                            <a href="https://drive.google.com/file/d/1yOvNS_5IASmmTU30k5EOn_Ikfx2V7fCC/view?usp=sharing" target="_blank" class="btn btn-xs btn-outline-info py-0 px-2 mt-1" style="font-size:0.75rem;">Revisar Master Recurso</a>
+                            <div class="mt-2">
+                                <span class="badge bg-secondary text-uppercase px-2 py-1" style="font-size:0.7rem; letter-spacing:1px;">Distribución y Métricas bajo Embargo Comercial</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7609057845501365525?rel=0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <h3 class="video-title-primary text-uppercase m-0">Mochila Combat 117 Halo</h3>
+                            <span class="video-title-secondary d-block text-uppercase">Yadatex</span>
+                            <span class="text-white-50 small d-block mt-1">Lanzamiento: 20-FEB-26</span>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">27.2K Views</span>
+                                <span class="metric-badge">1.2K Likes</span>
+                                <span class="metric-badge">+330 Favs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <div class="w-100 h-100 d-flex align-items-center justify-content-center bg-secondary bg-opacity-20 text-center p-2" style="font-size:0.75rem;">Fichero Activo Comercial</div>
+                            </div>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <h3 class="video-title-primary text-uppercase m-0">Mochila Zoro Premium One Piece</h3>
+                            <span class="video-title-secondary d-block text-uppercase">Yadatex</span>
+                            <span class="text-white-50 small d-block mt-1">Lanzamiento: 25-AGO-23</span>
+                            <a href="https://drive.google.com/file/d/1J0rKsrKwqFjSC1HAXM4cyme88xzVg9hS/view?usp=drive_link" target="_blank" class="btn btn-xs btn-outline-info py-0 px-2 mt-1" style="font-size:0.75rem;">Revisar Master Recurso</a>
+                            <div class="mt-2">
+                                <span class="badge bg-secondary text-uppercase px-2 py-1" style="font-size:0.7rem; letter-spacing:1px;">Distribución y Métricas bajo Embargo Comercial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- CATEGORÍA: ANÁLISIS Y TUTORIALES -->
                 <div class="row mb-3">
                     <div class="col-12 border-start border-info border-3 ps-3 ms-2 ms-md-0">
-                        <h2 class="category-title text-info text-uppercase m-0">Simulaciones de Fluidos y Líquidos</h2>
-                    </div>
-                </div>
-                
-                <div class="row g-4 justify-content-start mb-5">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-10 border-secondary h-100 text-center">
-                            <div class="ratio ratio-16x9 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 1rem;">
-                                <iframe src="https://www.youtube.com/embed/Fi9oCcywGrY?si=YSWE4JjB76NmTkaU" title="Simulación de Fluidos" allowfullscreen style="border-radius: 1rem;"></iframe>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="h5 card-title text-info mt-2">Simulación de Fluidos</h3>
-                                <p class="card-text small text-white-50 px-2">Simulación de Fluidos en Blender 4.5. Proyecto de la asignatura de Física y Simulación.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-10 border-secondary h-100 text-center">
-                            <div class="ratio ratio-16x9 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 1rem;">
-                                <iframe src="https://www.youtube.com/embed/dp-_5Q52H0M" title="Simulación de Líquido" allowfullscreen style="border-radius: 1rem;"></iframe>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="h5 card-title text-info mt-2">Simulación de Líquido</h3>
-                                <p class="card-text small text-white-50 px-2">Simulación de Líquido en Blender 4.5. Proyecto de Física y Simulación. Modelo: NATOVIC_21 "concrete cat statue".</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-10 border-secondary h-100 text-center">
-                            <div class="ratio ratio-16x9 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 1rem;">
-                                <iframe src="https://www.youtube.com/embed/9Q-vYKq8Ecw" title="Promoción de Producto - Milk Snake 1" allowfullscreen style="border-radius: 1rem;"></iframe>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="h5 card-title text-info mt-2">Promoción de Producto I</h3>
-                                <p class="card-text small text-white-50 px-2">Simulación de Líquido para Promoción. Marca "MILK SNAKE" por Valentina Kadiyama.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-10 border-secondary h-100 text-center">
-                            <div class="ratio ratio-16x9 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 1rem;">
-                                <iframe src="https://www.youtube.com/embed/0lQRuorzRyY" title="Promoción de Producto - Milk Snake 2" allowfullscreen style="border-radius: 1rem;"></iframe>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="h5 card-title text-info mt-2">Promoción de Producto II</h3>
-                                <p class="card-text small text-white-50 px-2">Simulación de Líquido para Promoción. Marca "MILK SNAKE" por Valentina Kadiyama.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-10 border-secondary h-100 text-center">
-                            <div class="ratio ratio-16x9 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 1rem;">
-                                <iframe src="https://www.youtube.com/embed/jBnR2BNLYe8" title="Promoción de Producto - Milk Snake 3" allowfullscreen style="border-radius: 1rem;"></iframe>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="h5 card-title text-info mt-2">Promoción de Producto III</h3>
-                                <p class="card-text small text-white-50 px-2">Simulación de Líquido para Promoción. Marca "MILK SNAKE" por Valentina Kadiyama.</p>
-                            </div>
-                        </div>
+                        <h2 class="category-title text-info text-uppercase m-0">Análisis y Tutoriales</h2>
                     </div>
                 </div>
 
+                <div class="row g-4 mb-5">
+                    <!-- Item 1 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7597982436563193109?rel=0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <span class="highlight-tag d-block mb-1">#1 Mejor Editado</span>
+                            <h3 class="video-title-primary text-uppercase m-0">El diseño de niveles de Halo 3</h3>
+                            <span class="text-white-50 small d-block mt-1">Publicación: 21-ENE-26</span>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">4.6K Views</span>
+                                <span class="metric-badge">789 Likes</span>
+                                <span class="metric-badge">+140 Favs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7597982436563193109?rel=0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <h3 class="video-title-primary text-uppercase m-0">Calificando diseños</h3>
+                            <span class="video-title-secondary d-block text-uppercase">Halo: Mark V</span>
+                            <span class="text-white-50 small d-block mt-1">Publicación: 24-ENE-26</span>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">4.6K Views</span>
+                                <span class="metric-badge">789 Likes</span>
+                                <span class="metric-badge">+140 Favs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7604216964415786261?rel=0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <h3 class="video-title-primary text-uppercase m-0">¿Cómo hacer videos para TikTok Shop?</h3>
+                            <span class="video-title-secondary d-block text-uppercase">Tutorial</span>
+                            <span class="text-white-50 small d-block mt-1">Publicación: 07-FEB-26</span>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">2.9K Views</span>
+                                <span class="metric-badge">165 Likes</span>
+                                <span class="metric-badge">+40 Favs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7614236896688114964?rel=0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <span class="highlight-tag d-block mb-1">#3 Mejor Editado</span>
+                            <h3 class="video-title-primary text-uppercase m-0">Diseñando mecánicas de mi juego de Halo</h3>
+                            <span class="video-title-secondary d-block text-uppercase">Inventario</span>
+                            <span class="text-white-50 small d-block mt-1">Publicación: 10-ABR-26</span>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">23.7K Views</span>
+                                <span class="metric-badge">4.1K Likes</span>
+                                <span class="metric-badge">+700 Favs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7627090054292262164?rel=0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <span class="highlight-tag d-block mb-1">#2 Mejor Editado (Versión Extendida)</span>
+                            <h3 class="video-title-primary text-uppercase m-0">Analizando armamento de videojuegos</h3>
+                            <span class="video-title-secondary d-block text-uppercase">Halo: MA40</span>
+                            <span class="text-white-50 small d-block mt-1">Publicación: 06-MAR-26</span>
+                            <a href="https://drive.google.com/file/d/1vE7LOonJuOObFQ-dKaF-z5FPaMoTrjKm/view?usp=sharing" target="_blank" class="btn btn-xs btn-outline-info py-0 px-2 mt-1" style="font-size:0.75rem;">Ver Versión Extendida</a>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">7.2K Views</span>
+                                <span class="metric-badge">1.2K Likes</span>
+                                <span class="metric-badge">+300 Favs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 6 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7627090054292262164?rel=0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <span class="highlight-tag d-block mb-1">#5 Mejor Editado</span>
+                            <h3 class="video-title-primary text-uppercase m-0">Mejorando la tienda de Halo Infinite</h3>
+                            <span class="text-white-50 small d-block mt-1">Publicación: 07-JUL-23</span>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">72.6K Views</span>
+                                <span class="metric-badge">1.2K Likes</span>
+                                <span class="metric-badge">+800 Favs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- CATEGORÍA: CINE Y ANIMACIÓN -->
                 <div class="row mb-3">
                     <div class="col-12 border-start border-info border-3 ps-3 ms-2 ms-md-0">
-                        <h2 class="category-title text-info text-uppercase m-0">Dinámicas de Partículas y Efectos Volumétricos</h2>
+                        <h2 class="category-title text-info text-uppercase m-0">Cine y Animación</h2>
                     </div>
                 </div>
 
-                <div class="row g-4 justify-content-start mb-5">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-10 border-secondary h-100 text-center">
-                            <div class="ratio ratio-16x9 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 1rem;">
-                                <iframe src="https://www.youtube.com/embed/1s2UUlBbo0o" title="Particles Velocity Simulation" allowfullscreen style="border-radius: 1rem;"></iframe>
+                <div class="row g-4 mb-5">
+                    <!-- Item 1 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7261705288275725574?rel=0" allowfullscreen></iframe>
                             </div>
-                            <div class="card-body">
-                                <h3 class="h5 card-title text-info mt-2">Particles Velocity Simulation</h3>
-                                <p class="card-text small text-white-50 px-2">Particles Velocity Simulation en Blender 4.5. Proyecto de la asignatura de Física y Simulación.</p>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <h3 class="video-title-primary text-uppercase m-0">¿Cuál es el arma más icónica de los videojuegos?</h3>
+                            <span class="video-title-secondary d-block text-uppercase">Halo M6D</span>
+                            <span class="text-white-50 small d-block mt-1">Publicación: 30-SEP-23</span>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">269K Views</span>
+                                <span class="metric-badge">48.4K Likes</span>
+                                <span class="metric-badge">+6.6K Favs</span>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-10 border-secondary h-100 text-center">
-                            <div class="ratio ratio-16x9 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 1rem;">
-                                <iframe src="https://www.youtube.com/embed/3R904EYbrdQ" title="Simulación de Fuego" allowfullscreen style="border-radius: 1rem;"></iframe>
+                    <!-- Item 2 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7621887438042025236?rel=0" allowfullscreen></iframe>
                             </div>
-                            <div class="card-body">
-                                <h3 class="h5 card-title text-info mt-2">Simulación de Fuego</h3>
-                                <p class="card-text small text-white-50 px-2">Generación de efectos volumétricos y físicas térmicas de fuego en Blender 4.5.</p>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <h3 class="video-title-primary text-uppercase m-0">Making Off</h3>
+                            <span class="video-title-secondary d-block text-uppercase">D1N: Halo MA40</span>
+                            <span class="text-white-50 small d-block mt-1">Publicación: 27-MAR-26</span>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">1.8K Views</span>
+                                <span class="metric-badge">288 Likes</span>
+                                <span class="metric-badge">+30 Favs</span>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-10 border-secondary h-100 text-center">
-                            <div class="ratio ratio-16x9 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 1rem;">
-                                <iframe src="https://www.youtube.com/embed/AVbVQVwG4Q8" title="Particle Physics" allowfullscreen style="border-radius: 1rem;"></iframe>
+                    <!-- Item 3 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7489161446740249861?rel=0" allowfullscreen></iframe>
                             </div>
-                            <div class="card-body">
-                                <h3 class="h5 card-title text-info mt-2">Particle Physics</h3>
-                                <p class="card-text small text-white-50 px-2">Comportamiento dinámico e interacción de sistemas distribuidos de partículas.</p>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <h3 class="video-title-primary text-uppercase m-0">Making Off Despídete Bien</h3>
+                            <span class="video-title-secondary d-block text-uppercase">Los Mesoneros: Lyrics Video</span>
+                            <span class="text-white-50 small d-block mt-1">Publicación: 05-ABR-25</span>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">7.8K Views</span>
+                                <span class="metric-badge">818 Likes</span>
+                                <span class="metric-badge">+40 Favs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7489940379731496198?rel=0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <h3 class="video-title-primary text-uppercase m-0">Mi primera animación</h3>
+                            <span class="video-title-secondary d-block text-uppercase">"Golem"</span>
+                            <span class="text-white-50 small d-block mt-1">Publicación: 05-ABR-25</span>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">1.4K Views</span>
+                                <span class="metric-badge">+90 Likes</span>
+                                <span class="metric-badge">+10 Favs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7280254896513830149?rel=0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <h3 class="video-title-primary text-uppercase m-0">Making Off Xbox360</h3>
+                            <span class="video-title-secondary d-block text-uppercase">3D Modeling</span>
+                            <span class="text-white-50 small d-block mt-1">Publicación: 18-SEP-23</span>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">48.6K Views</span>
+                                <span class="metric-badge">5.9K Likes</span>
+                                <span class="metric-badge">+850 Favs</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
+
+                <!-- CATEGORÍA: STORYTELLING -->
                 <div class="row mb-3">
                     <div class="col-12 border-start border-info border-3 ps-3 ms-2 ms-md-0">
-                        <h2 class="category-title text-info text-uppercase m-0">Físicas de Telas y Cuerpos Blandos</h2>
+                        <h2 class="category-title text-info text-uppercase m-0">Storytelling</h2>
                     </div>
                 </div>
 
-                <div class="row g-4 justify-content-start mb-5">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-10 border-secondary h-100 text-center">
-                            <div class="ratio ratio-16x9 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 1rem;">
-                                <iframe src="https://www.youtube.com/embed/ZQClqPHGee0" title="Cloth + Hook Physics" allowfullscreen style="border-radius: 1rem;"></iframe>
+                <div class="row g-4">
+                    <!-- Item 1 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7331067339615554821?rel=0" allowfullscreen></iframe>
                             </div>
-                            <div class="card-body">
-                                <h3 class="h5 card-title text-info mt-2">Cloth + Hook Physics</h3>
-                                <p class="card-text small text-white-50 px-2">Simulación de tela y ganchos mecánicos mediante físicas en Blender 4.5.</p>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <span class="highlight-tag d-block mb-1">#4 Mejor Editado</span>
+                            <h3 class="video-title-primary text-uppercase m-0">¡Estoy desarrollando un juego de Halo!</h3>
+                            <span class="text-white-50 small d-block mt-1">Publicación: 02-FEB-24</span>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">98.3K Views</span>
+                                <span class="metric-badge">17.6K Likes</span>
+                                <span class="metric-badge">+3.6K Favs</span>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-10 border-secondary h-100 text-center">
-                            <div class="ratio ratio-16x9 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 1rem;">
-                                <iframe src="https://www.youtube.com/embed/qCU7wb0Q8uc" title="Cloth + Wind Physics" allowfullscreen style="border-radius: 1rem;"></iframe>
+                    <!-- Item 2 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7334050693365484806?rel=0" allowfullscreen></iframe>
                             </div>
-                            <div class="card-body">
-                                <h3 class="h5 card-title text-info mt-2">Cloth + Wind Physics</h3>
-                                <p class="card-text small text-white-50 px-2">Simulación dinámica de tela interactuando con fuerzas de viento en Blender 4.5.</p>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <h3 class="video-title-primary text-uppercase m-0">What If?</h3>
+                            <span class="video-title-secondary d-block text-uppercase">Halo Infinite</span>
+                            <span class="text-white-50 small d-block mt-1">Publicación: 10-FEB-24</span>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">97.2K Views</span>
+                                <span class="metric-badge">14.3K Likes</span>
+                                <span class="metric-badge">+2.3K Favs</span>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-10 border-secondary h-100 text-center">
-                            <div class="ratio ratio-16x9 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 1rem;">
-                                <iframe src="https://www.youtube.com/embed/83-pstMu6_Y" title="Soft Body Physics" allowfullscreen style="border-radius: 1rem;"></iframe>
+                    <!-- Item 3 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7266153066880191749?rel=0" allowfullscreen></iframe>
                             </div>
-                            <div class="card-body">
-                                <h3 class="h5 card-title text-info mt-2">Soft Body Physics</h3>
-                                <p class="card-text small text-white-50 px-2">Cálculo de deformación y rebote de cuerpos blandos en la asignatura de Física.</p>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <span class="highlight-tag d-block mb-1">★ Top 2 Rendimiento</span>
+                            <h3 class="video-title-primary text-uppercase m-0">Más de 10,000 votaron</h3>
+                            <span class="text-white-50 small d-block mt-1">Publicación: 11-AGO-23</span>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">413.4K Views</span>
+                                <span class="metric-badge">65.1K Likes</span>
+                                <span class="metric-badge">+7.3K Favs</span>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="row mb-3">
-                    <div class="col-12 border-start border-info border-3 ps-3 ms-2 ms-md-0">
-                        <h2 class="category-title text-info text-uppercase m-0">Destrucción y Físicas de Cuerpos Rígidos</h2>
-                    </div>
-                </div>
-
-                <div class="row g-4 justify-content-start">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-10 border-secondary h-100 text-center">
-                            <div class="ratio ratio-16x9 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 1rem;">
-                                <iframe src="https://www.youtube.com/embed/xWK_Blf457Q" title="Cell Fracture" allowfullscreen style="border-radius: 1rem;"></iframe>
+                    <!-- Item 4 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7265039706105072902?rel=0" allowfullscreen></iframe>
                             </div>
-                            <div class="card-body">
-                                <h3 class="h5 card-title text-info mt-2">Cell Fracture</h3>
-                                <p class="card-text small text-white-50 px-2">Desglose técnico de fractura de celdas y destrucción de elementos rígidos.</p>
+                        </div>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <span class="highlight-tag d-block mb-1">★ Top 1 Rendimiento</span>
+                            <h3 class="video-title-primary text-uppercase m-0">¿Cuál es tu videojuego favorito?</h3>
+                            <span class="text-white-50 small d-block mt-1">Publicación: 08-AGO-23</span>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">519.7K Views</span>
+                                <span class="metric-badge">68.9K Likes</span>
+                                <span class="metric-badge">+6.5K Favs</span>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-10 border-secondary h-100 text-center">
-                            <div class="ratio ratio-16x9 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 1rem;">
-                                <iframe src="https://www.youtube.com/embed/7SeMkszQIYE" title="Rigid Body Physics I" allowfullscreen style="border-radius: 1rem;"></iframe>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="h5 card-title text-info mt-2">Rigid Body Physics I</h3>
-                                <p class="card-text small text-white-50 px-2">Simulación de colisiones dinámicas y cálculo de gravedad en cuerpos rígidos.</p>
+                    <!-- Item 5 -->
+                    <div class="col-12 col-lg-6 row align-items-center g-3">
+                        <div class="col-4 col-sm-3">
+                            <div class="ratio ratio-9x16 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 0.5rem;">
+                                <iframe src="https://www.tiktok.com/player/v1/7269852838048681221?rel=0" allowfullscreen></iframe>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-10 border-secondary h-100 text-center">
-                            <div class="ratio ratio-16x9 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 1rem;">
-                                <iframe src="https://www.youtube.com/embed/HPhKENjaybc" title="Rigid Body Physics II" allowfullscreen style="border-radius: 1rem;"></iframe>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="h5 card-title text-info mt-2">Rigid Body Physics II</h3>
-                                <p class="card-text small text-white-50 px-2">Cálculo estructural de impactos encadenados utilizando físicas de cuerpos rígidos.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-10 border-secondary h-100 text-center">
-                            <div class="ratio ratio-16x9 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 1rem;">
-                                <iframe src="https://www.youtube.com/embed/KrxUsmMPwMA" title="Rigid Body Physics III" allowfullscreen style="border-radius: 1rem;"></iframe>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="h5 card-title text-info mt-2">Rigid Body Physics III</h3>
-                                <p class="card-text small text-white-50 px-2">Evaluación analítica del comportamiento cinemático en simulaciones mecánicas rígidas.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-10 border-secondary h-100 text-center">
-                            <div class="ratio ratio-16x9 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 1rem;">
-                                <iframe src="https://www.youtube.com/embed/IGC_3lTu7Ik" title="Rigid Body Physics IV" allowfullscreen style="border-radius: 1rem;"></iframe>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="h5 card-title text-info mt-2">Rigid Body Physics IV</h3>
-                                <p class="card-text small text-white-50 px-2">Análisis de colisiones complejas distribuidas en sistemas dinámicos rígidos.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-10 border-secondary h-100 text-center">
-                            <div class="ratio ratio-16x9 border border-secondary border-opacity-50 overflow-hidden" style="border-radius: 1rem;">
-                                <iframe src="https://www.youtube.com/embed/ZAG43OulOyY" title="Rigid Body Physics & Constraints" allowfullscreen style="border-radius: 1rem;"></iframe>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="h5 card-title text-info mt-2">Rigid Body & Constraints</h3>
-                                <p class="card-text small text-white-50 px-2">Implementación y resolución técnica de restricciones de unión mecánicas entre objetos activos.</p>
+                        <div class="col-8 col-sm-9 ps-3">
+                            <h3 class="video-title-primary text-uppercase m-0">¡Quiero ser animador!</h3>
+                            <span class="text-white-50 small d-block mt-1">Publicación: 02-FEB-24</span>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="metric-badge">57.3K Views</span>
+                                <span class="metric-badge">9.5K Likes</span>
+                                <span class="metric-badge">+1K Favs</span>
                             </div>
                         </div>
                     </div>
