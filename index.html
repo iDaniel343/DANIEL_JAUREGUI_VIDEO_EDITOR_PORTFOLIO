@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio - Daniel Jauregui</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Librería de Iconos de Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +19,14 @@
             --metric-views: #4ea8de;
             --metric-likes: #ff4d6d;
             --metric-favs: #ffb703;
+            
+            /* Colores distintivos por categoría */
+            --cat-metrics: #ffb703;
+            --cat-tech: #e9ecef;
+            --cat-promo: #00f5d4;
+            --cat-analysis: #06d6a0;
+            --cat-film: #b5179e;
+            --cat-story: #f77f00;
         }
         body {
             font-family: 'Roboto', sans-serif;
@@ -34,47 +41,27 @@
         }
         .category-title {
             position: relative;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             letter-spacing: 2px;
-        }
-        .text-info {
-            color: var(--accent-gray-light) !important;
-        }
-        .border-info {
-            border-color: var(--accent-gray) !important;
-        }
-        .btn-info {
-            background-color: var(--accent-gray-light) !important;
-            border-color: var(--accent-gray-light) !important;
-        }
-        .btn-info:hover {
-            background-color: var(--accent-gray) !important;
-            border-color: var(--accent-gray) !important;
-        }
-        .btn-outline-info {
-            color: var(--accent-gray-light) !important;
-            border-color: var(--accent-gray-dark) !important;
-        }
-        .btn-outline-info:hover {
-            background-color: var(--accent-gray-dark) !important;
-            color: #fff !important;
+            font-weight: 700;
         }
         
-        /* Retícula ultra compacta de 5 columnas */
+        /* Retícula optimizada a 4 columnas sin truncado */
         .portfolio-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 0.6rem;
-            transition: transform 0.2s ease, border-color 0.2s ease;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 0.75rem;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
             overflow: hidden;
         }
         .portfolio-card:hover {
-            transform: translateY(-2px);
-            border-color: var(--accent-gray);
+            transform: translateY(-3px);
+            border-color: rgba(255,255,255,0.2);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
         }
         .thumbnail-container {
             width: 100%;
-            height: 160px;
+            height: 200px;
             position: relative;
             background: #1c1f23;
             overflow: hidden;
@@ -85,55 +72,59 @@
             object-fit: cover;
         }
         
-        /* Botones de métricas estilizados */
+        /* Sistema triple de botones de métricas */
+        .metric-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
         .metric-btn {
-            font-size: 0.7rem;
+            font-size: 0.68rem;
             padding: 2px 6px;
-            border-radius: 3px;
-            background: rgba(255, 255, 255, 0.02);
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.03);
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 4px;
             pointer-events: none;
+            font-weight: 500;
         }
-        .btn-views {
-            color: var(--metric-views);
-            border: 1px solid rgba(78, 168, 222, 0.2);
-        }
-        .btn-likes {
-            color: var(--metric-likes);
-            border: 1px solid rgba(255, 77, 109, 0.2);
-        }
-        .btn-favs {
-            color: var(--metric-favs);
-            border: 1px solid rgba(255, 183, 3, 0.2);
-        }
+        .btn-views { color: var(--metric-views); border: 1px solid rgba(78, 168, 222, 0.15); }
+        .btn-likes { color: var(--metric-likes); border: 1px solid rgba(255, 77, 109, 0.15); }
+        .btn-favs { color: var(--metric-favs); border: 1px solid rgba(255, 183, 3, 0.15); }
         
+        /* Condecoraciones superiores en amarillo */
         .highlight-tag {
-            color: var(--accent-gray-light);
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.7rem;
-            letter-spacing: 0.5px;
-            display: block;
-        }
-        .video-title-primary {
-            font-size: 0.9rem;
             color: #ffffff;
             font-weight: 700;
-            line-height: 1.2;
+            text-transform: uppercase;
+            font-size: 0.68rem;
+            letter-spacing: 1px;
+            display: inline-block;
+            background: var(--metric-favs);
+            color: #000000;
+            padding: 2px 8px;
+            border-radius: 0 0 4px 4px;
+        }
+        
+        .video-title-primary {
+            font-size: 1rem;
+            color: #ffffff;
+            font-weight: 700;
+            line-height: 1.3;
         }
         .video-title-secondary {
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             color: var(--accent-gray-light);
             font-weight: 400;
-            line-height: 1.2;
+            line-height: 1.3;
         }
+        
         @media (min-width: 992px) {
-            .row-cols-lg-5 > * {
-                flex: 0 0 20%;
-                max-width: 20%;
+            .row-cols-lg-4 > * {
+                flex: 0 0 25%;
+                max-width: 25%;
             }
         }
     </style>
@@ -143,8 +134,8 @@
     <header class="container text-center mb-5">
         <div class="row justify-content-center">
             <div class="col-12 col-xl-11 border-bottom border-secondary pb-4">
-                <span class="text-secondary text-uppercase tracking-wider small fw-semibold d-block mb-1">PORTAFOLIO</span>
-                <h1 class="display-3 fw-bold text-uppercase text-info tracking-wide mb-3">DANIEL JAUREGUI</h1>
+                <span class="text-secondary text-uppercase tracking-wider small fw-semibold d-block mb-1">PORTAFOLIO DIGITAL</span>
+                <h1 class="display-3 fw-bold text-uppercase tracking-wide mb-3" style="color: #ffffff;">DANIEL JAUREGUI</h1>
             </div>
         </div>
     </header>
@@ -153,179 +144,162 @@
         <div class="row justify-content-center">
             <div class="col-12 col-xl-11">
 
-                <!-- SECCIÓN: MÁXIMO RENDIMIENTO -->
+                <!-- SECCIÓN: MÁXIMO RENDIMIENTO (4 COLUMNAS) -->
                 <div class="row mb-3">
-                    <div class="col-12 border-start border-info border-3 ps-3 ms-2 ms-md-0">
-                        <h2 class="category-title text-info text-uppercase m-0">
-                            <i class="bi bi-graph-up-arrow me-2"></i>Destacados: Mejores Métricas
+                    <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0" style="border-color: var(--cat-metrics) !important;">
+                        <h2 class="category-title text-uppercase m-0" style="color: var(--cat-metrics);">
+                            <i class="bi bi-crown-fill me-2"></i>Destacados: Mejores Métricas
                         </h2>
                     </div>
                 </div>
 
-                <div class="row g-3 mb-5 row-cols-2 row-cols-md-3 row-cols-lg-5">
-                    <!-- Top 1 Métricas -->
+                <div class="row g-3 mb-5 row-cols-2 row-cols-md-3 row-cols-lg-4">
+                    <!-- Top 1 -->
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/game-favorito.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 bg-dark bg-opacity-75 p-1 w-100 text-center text-truncate">★ Top 1</span>
+                                <img src="img/game-favorito.jpg" alt="Miniatura Videojuego Favorito" class="video-thumbnail">
+                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Métrica Oro • Top 1</span>
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">¿Cuál es tu videojuego favorito?</h3>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">¿Cuál es tu videojuego favorito?</h3>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 519.7K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 68.9K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 6.5K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7265039706105072902" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7265039706105072902" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
-                    <!-- Top 2 Métricas -->
+                    <!-- Top 2 -->
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/diezmil-votos.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 bg-dark bg-opacity-75 p-1 w-100 text-center text-truncate">★ Top 2</span>
+                                <img src="img/diezmil-votos.jpg" alt="Miniatura Más de 10k Votaron" class="video-thumbnail">
+                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Métrica Oro • Top 2</span>
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Más de 10,000 votaron</h3>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">Más de 10,000 votaron</h3>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 413.4K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 65.1K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 7.3K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7266153066880191749" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7266153066880191749" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
-                    <!-- Top 3 Métricas -->
+                    <!-- Top 3 -->
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/arma-iconica.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 bg-dark bg-opacity-75 p-1 w-100 text-center text-truncate">★ Top 3</span>
+                                <img src="img/arma-iconica.jpg" alt="Miniatura Arma Icónica" class="video-thumbnail">
+                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Métrica Oro • Top 3</span>
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">¿Cuál es el arma más icónica?</h3>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">¿Cuál es el arma más icónica de los videojuegos?</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">Halo M6D</span>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 269K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 48.4K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 6.6K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7261705288275725574" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7261705288275725574" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
-                    <!-- Top 4 Métricas -->
+                    <!-- Top 4 -->
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/mochila-legendaria.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 bg-dark bg-opacity-75 p-1 w-100 text-center text-truncate">★ Top 4</span>
+                                <img src="img/mochila-legendaria.jpg" alt="Miniatura Mochila Halo" class="video-thumbnail">
+                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Métrica Oro • Top 4</span>
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Mochila Legendaria Halo</h3>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">Mochila Legendaria Halo</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">Yadatex</span>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 100.7K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 6.1K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 1.4K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7602751958671265044" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
-                        </div>
-                    </div>
-                    <!-- Top 5 Métricas -->
-                    <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
-                            <div class="thumbnail-container mb-2">
-                                <img src="img/desarrollando-juego.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 bg-dark bg-opacity-75 p-1 w-100 text-center text-truncate">★ Top 5</span>
-                            </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">¡Estoy desarrollando un juego!</h3>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
-                                <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 98.3K</span>
-                                <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 17.6K</span>
-                            </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7331067339615554821" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7602751958671265044" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                 </div>
 
 
-                <!-- SECCIÓN: EXCELENCIA TÉCNICA -->
+                <!-- SECCIÓN: EXCELENCIA TÉCNICA (4 COLUMNAS) -->
                 <div class="row mb-3">
-                    <div class="col-12 border-start border-info border-3 ps-3 ms-2 ms-md-0">
-                        <h2 class="category-title text-info text-uppercase m-0">
-                            <i class="bi bi-sliders me-2"></i>Destacados: Mejor Editados
+                    <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0" style="border-color: var(--cat-tech) !important;">
+                        <h2 class="category-title text-uppercase m-0" style="color: var(--cat-tech);">
+                            <i class="bi bi-film me-2"></i>Destacados: Postproducción y Edición Avanzada
                         </h2>
                     </div>
                 </div>
 
-                <div class="row g-3 mb-5 row-cols-2 row-cols-md-3 row-cols-lg-5">
+                <div class="row g-3 mb-5 row-cols-2 row-cols-md-3 row-cols-lg-4">
                     <!-- Top 1 Edición -->
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/niveles-halo3.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 bg-dark bg-opacity-75 p-1 w-100 text-center text-truncate">#1 Editado</span>
+                                <img src="img/niveles-halo3.jpg" alt="Miniatura Niveles Halo 3" class="video-thumbnail">
+                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto I</span>
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">El diseño de niveles de Halo 3</h3>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">El diseño de niveles de Halo 3</h3>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 4.6K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 789</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 140</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7597982436563193109" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7597982436563193109" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                     <!-- Top 2 Edición -->
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/armamento-ma40.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 bg-dark bg-opacity-75 p-1 w-100 text-center text-truncate">#2 Editado</span>
+                                <img src="img/armamento-ma40.jpg" alt="Miniatura Armamento MA40" class="video-thumbnail">
+                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto II</span>
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Analizando armamento</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">Halo: MA40</span>
-                            <div class="d-flex gap-1 mt-2 mb-2">
-                                <a href="https://www.tiktok.com/@reach_343/video/7627090054292262164" target="_blank" class="btn btn-xs btn-outline-info w-50 py-1" style="font-size:0.65rem;"><i class="bi bi-tiktok"></i></a>
-                                <a href="https://drive.google.com/file/d/1vE7LOonJuOObFQ-dKaF-z5FPaMoTrjKm/view?usp=sharing" target="_blank" class="btn btn-xs btn-info text-dark w-50 py-1" style="font-size:0.65rem;"><i class="bi bi-hdd"></i></a>
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">Analizando armamento de videojuegos</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">Halo: MA40 (Versión Extendida)</span>
+                            <div class="metric-group mb-3">
+                                <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 7.2K</span>
+                                <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 1.2K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 300</span>
+                            </div>
+                            <div class="d-flex gap-2 mt-auto">
+                                <a href="https://drive.google.com/file/d/1vE7LOonJuOObFQ-dKaF-z5FPaMoTrjKm/view?usp=sharing" target="_blank" class="btn btn-sm btn-light w-50 text-uppercase py-2"><i class="bi bi-cloud-arrow-down-fill me-1"></i>Drive</a>
+                                <a href="https://www.tiktok.com/@reach_343/video/7627090054292262164" target="_blank" class="btn btn-sm btn-outline-secondary w-50 text-uppercase py-2"><i class="bi bi-tiktok"></i></a>
                             </div>
                         </div>
                     </div>
                     <!-- Top 3 Edición -->
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/mecanicas-juego.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 bg-dark bg-opacity-75 p-1 w-100 text-center text-truncate">#3 Editado</span>
+                                <img src="img/mecanicas-juego.jpg" alt="Miniatura Mecánicas Juego" class="video-thumbnail">
+                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto III</span>
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Diseñando mecánicas</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">Inventario</span>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">Diseñando mecánicas de mi juego de Halo</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">Inventario</span>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 23.7K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 4.1K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 700</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7614236896688114964" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7614236896688114964" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                     <!-- Top 4 Edición -->
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/desarrollando-juego.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 bg-dark bg-opacity-75 p-1 w-100 text-center text-truncate">#4 Editado</span>
+                                <img src="img/desarrollando-juego.jpg" alt="Miniatura Juego Halo" class="video-thumbnail">
+                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto IV</span>
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">¡Estoy desarrollando un juego!</h3>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">¡Estoy desarrollando un juego de Halo!</h3>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 98.3K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 17.6K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 3.6K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7331067339615554821" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
-                        </div>
-                    </div>
-                    <!-- Top 5 Edición -->
-                    <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
-                            <div class="thumbnail-container mb-2">
-                                <img src="img/tienda-infinite.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 bg-dark bg-opacity-75 p-1 w-100 text-center text-truncate">#5 Editado</span>
-                            </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Mejorando la tienda</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">Halo Infinite</span>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
-                                <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 72.6K</span>
-                                <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 1.2K</span>
-                            </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7627090054292262164" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7331067339615554821" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                 </div>
@@ -333,66 +307,68 @@
 
                 <!-- CATEGORÍA: VIDEOS DE PROMOCIÓN DE PRODUCTO -->
                 <div class="row mb-3">
-                    <div class="col-12 border-start border-info border-3 ps-3 ms-2 ms-md-0">
-                        <h2 class="category-title text-info text-uppercase m-0">
-                            <i class="bi bi-box-seam me-2"></i>Videos de Promoción de Producto
+                    <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0" style="border-color: var(--cat-promo) !important;">
+                        <h2 class="category-title text-uppercase m-0" style="color: var(--cat-promo);">
+                            <i class="bi bi-tag-fill me-2"></i>Videos de Promoción de Producto
                         </h2>
                     </div>
                 </div>
                 
-                <div class="row g-3 mb-5 row-cols-2 row-cols-md-3 row-cols-lg-5">
+                <div class="row g-3 mb-5 row-cols-2 row-cols-md-3 row-cols-lg-4">
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/mochila-legendaria.jpg" alt="Miniatura" class="video-thumbnail">
+                                <img src="img/mochila-legendaria.jpg" alt="Mochila Legendaria" class="video-thumbnail">
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Mochila Legendaria Halo</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">Yadatex</span>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">Mochila Legendaria Halo</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">Yadatex</span>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 100.7K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 6.1K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 1.4K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7602751958671265044" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7602751958671265044" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/mochila-batman.jpg" alt="Miniatura" class="video-thumbnail">
+                                <img src="img/mochila-batman.jpg" alt="Mochila Batman" class="video-thumbnail">
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Mochila Batman Classic</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">Yadatex</span>
-                            <div class="my-2">
-                                <span class="badge bg-secondary text-uppercase p-1 w-100 text-truncate" style="font-size:0.55rem;"><i class="bi bi-clock-history me-1"></i>Optimización Inventario</span>
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">Mochila Batman Classic</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">Yadatex</span>
+                            <div class="my-2 mb-3">
+                                <span class="badge border border-secondary text-uppercase p-2 w-100 text-wrap text-start text-secondary" style="font-size:0.65rem; line-height: 1.3;"><i class="bi bi-clock me-1"></i>Pendiente de subir a la espera de restock de inventario</span>
                             </div>
-                            <a href="https://drive.google.com/file/d/1yOvNS_5IASmmTU30k5EOn_Ikfx2V7fCC/view?usp=sharing" target="_blank" class="btn btn-xs btn-info text-dark w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-hdd me-1"></i>Drive</a>
+                            <a href="https://drive.google.com/file/d/1yOvNS_5IASmmTU30k5EOn_Ikfx2V7fCC/view?usp=sharing" target="_blank" class="btn btn-sm btn-light w-100 mt-auto text-uppercase py-2"><i class="bi bi-cloud-arrow-down-fill me-2"></i>Master Drive</a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/mochila-combat.jpg" alt="Miniatura" class="video-thumbnail">
+                                <img src="img/mochila-combat.jpg" alt="Mochila Combat" class="video-thumbnail">
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Mochila Combat 117 Halo</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">Yadatex</span>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">Mochila Combat 117 Halo</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">Yadatex</span>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 27.2K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 1.2K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 330</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7609057845501365525" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7609057845501365525" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/mochila-zoro.jpg" alt="Miniatura" class="video-thumbnail">
+                                <img src="img/mochila-zoro.jpg" alt="Mochila Zoro" class="video-thumbnail">
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Mochila Zoro Premium One Piece</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">Yadatex</span>
-                            <div class="my-2">
-                                <span class="badge bg-secondary text-uppercase p-1 w-100 text-truncate" style="font-size:0.55rem;"><i class="bi bi-clock-history me-1"></i>Optimización Inventario</span>
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">Mochila Zoro Premium One Piece</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">Yadatex</span>
+                            <div class="my-2 mb-3">
+                                <span class="badge border border-secondary text-uppercase p-2 w-100 text-wrap text-start text-secondary" style="font-size:0.65rem; line-height: 1.3;"><i class="bi bi-clock me-1"></i>Pendiente de subir a la espera de restock de inventario</span>
                             </div>
-                            <a href="https://drive.google.com/file/d/1J0rKsrKwqFjSC1HAXM4cyme88xzVg9hS/view?usp=drive_link" target="_blank" class="btn btn-xs btn-info text-dark w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-hdd me-1"></i>Drive</a>
+                            <a href="https://drive.google.com/file/d/1J0rKsrKwqFjSC1HAXM4cyme88xzVg9hS/view?usp=drive_link" target="_blank" class="btn btn-sm btn-light w-100 mt-auto text-uppercase py-2"><i class="bi bi-cloud-arrow-down-fill me-2"></i>Master Drive</a>
                         </div>
                     </div>
                 </div>
@@ -400,98 +376,107 @@
 
                 <!-- CATEGORÍA: ANÁLISIS Y TUTORIALES -->
                 <div class="row mb-3">
-                    <div class="col-12 border-start border-info border-3 ps-3 ms-2 ms-md-0">
-                        <h2 class="category-title text-info text-uppercase m-0">
-                            <i class="bi bi-journal-code me-2"></i>Análisis y Tutoriales
+                    <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0">
+                        <h2 class="category-title text-uppercase m-0" style="color: var(--cat-analysis); border-color: var(--cat-analysis) !important;">
+                            <i class="bi bi-cpu me-2"></i>Análisis y Tutoriales
                         </h2>
                     </div>
                 </div>
 
-                <div class="row g-3 mb-5 row-cols-2 row-cols-md-3 row-cols-lg-5">
+                <div class="row g-3 mb-5 row-cols-2 row-cols-md-3 row-cols-lg-4">
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/niveles-halo3.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 bg-dark bg-opacity-75 p-1 w-100 text-center text-truncate">#1 Editado</span>
+                                <img src="img/niveles-halo3.jpg" alt="Miniatura Niveles" class="video-thumbnail">
+                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto I</span>
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">El diseño de niveles de Halo 3</h3>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">El diseño de niveles de Halo 3</h3>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 4.6K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 789</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 140</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7597982436563193109" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7597982436563193109" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/disenos-markv.jpg" alt="Miniatura" class="video-thumbnail">
+                                <img src="img/disenos-markv.jpg" alt="Miniatura Mark V" class="video-thumbnail">
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Calificando diseños</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">Halo: Mark V</span>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">Calificando diseños</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">Halo: Mark V</span>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 4.6K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 789</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 140</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7597982436563193109" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7597982436563193109" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/tiktok-shop.jpg" alt="Miniatura" class="video-thumbnail">
+                                <img src="img/tiktok-shop.jpg" alt="Miniatura TikTok Shop" class="video-thumbnail">
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">¿Cómo hacer videos para TikTok Shop?</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">Tutorial</span>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">¿Cómo hacer videos para TikTok Shop?</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">Tutorial</span>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 2.9K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 165</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 40</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7604216964415786261" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7604216964415786261" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/mecanicas-juego.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 bg-dark bg-opacity-75 p-1 w-100 text-center text-truncate">#3 Editado</span>
+                                <img src="img/mecanicas-juego.jpg" alt="Miniatura Mecánicas" class="video-thumbnail">
+                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto III</span>
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Diseñando mecánicas</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">Inventario</span>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">Diseñando mecánicas de mi juego de Halo</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">Inventario</span>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 23.7K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 4.1K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 700</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7614236896688114964" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7614236896688114964" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/armamento-ma40.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 bg-dark bg-opacity-75 p-1 w-100 text-center text-truncate">#2 Editado</span>
+                                <img src="img/armamento-ma40.jpg" alt="Miniatura MA40" class="video-thumbnail">
+                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto II</span>
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Analizando armamento</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">Halo: MA40</span>
-                            <div class="d-flex gap-1 mt-2 mb-2">
-                                <a href="https://www.tiktok.com/@reach_343/video/7627090054292262164" target="_blank" class="btn btn-xs btn-outline-info w-50 py-1" style="font-size:0.65rem;"><i class="bi bi-tiktok"></i></a>
-                                <a href="https://drive.google.com/file/d/1vE7LOonJuOObFQ-dKaF-z5FPaMoTrjKm/view?usp=sharing" target="_blank" class="btn btn-xs btn-info text-dark w-50 py-1" style="font-size:0.65rem;"><i class="bi bi-hdd"></i></a>
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">Analizando armamento de videojuegos</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">Halo: MA40</span>
+                            <div class="metric-group mb-3">
+                                <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 7.2K</span>
+                                <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 1.2K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 300</span>
+                            </div>
+                            <div class="d-flex gap-2 mt-auto">
+                                <a href="https://drive.google.com/file/d/1vE7LOonJuOObFQ-dKaF-z5FPaMoTrjKm/view?usp=sharing" target="_blank" class="btn btn-sm btn-light w-50 text-uppercase py-2"><i class="bi bi-cloud-arrow-down-fill me-1"></i>Drive</a>
+                                <a href="https://www.tiktok.com/@reach_343/video/7627090054292262164" target="_blank" class="btn btn-sm btn-outline-secondary w-50 text-uppercase py-2"><i class="bi bi-tiktok"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/tienda-infinite.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 bg-dark bg-opacity-75 p-1 w-100 text-center text-truncate">#5 Editado</span>
+                                <img src="img/tienda-infinite.jpg" alt="Miniatura Tienda" class="video-thumbnail">
+                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto V</span>
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Mejorando la tienda</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">Halo Infinite</span>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">Mejorando la tienda de Halo Infinite</h3>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 72.6K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 1.2K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 800</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7627090054292262164" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7627090054292262164" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                 </div>
@@ -499,82 +484,87 @@
 
                 <!-- CATEGORÍA: CINE Y ANIMACIÓN -->
                 <div class="row mb-3">
-                    <div class="col-12 border-start border-info border-3 ps-3 ms-2 ms-md-0">
-                        <h2 class="category-title text-info text-uppercase m-0">
-                            <i class="bi bi-film me-2"></i>Cine y Animación
+                    <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0">
+                        <h2 class="category-title text-uppercase m-0" style="color: var(--cat-film); border-color: var(--cat-film) !important;">
+                            <i class="bi bi-camera-reels-fill me-2"></i>Cine y Animación
                         </h2>
                     </div>
                 </div>
 
-                <div class="row g-3 mb-5 row-cols-2 row-cols-md-3 row-cols-lg-5">
+                <div class="row g-3 mb-5 row-cols-2 row-cols-md-3 row-cols-lg-4">
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/arma-iconica.jpg" alt="Miniatura" class="video-thumbnail">
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">¿Cuál es el arma más icónica?</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">Halo M6D</span>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">¿Cuál es el arma más icónica de los videojuegos?</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">Halo M6D</span>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 269K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 48.4K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 6.6K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7261705288275725574" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7261705288275725574" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/making-d1n.jpg" alt="Miniatura" class="video-thumbnail">
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Making Off</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">D1N: Halo MA40</span>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">Making Off</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">D1N: Halo MA40</span>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 1.8K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 288</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 30</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7621887438042025236" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7621887438042025236" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/making-despidete.jpg" alt="Miniatura" class="video-thumbnail">
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Making Off Despídete Bien</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">Los Mesoneros: Lyrics Video</span>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">Making Off Despídete Bien</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">Los Mesoneros: Lyrics Video</span>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 7.8K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 818</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 40</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7489161446740249861" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7489161446740249861" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/primera-animacion.jpg" alt="Miniatura" class="video-thumbnail">
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Mi primera animación</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">"Golem"</span>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">Mi primera animación</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">"Golem"</span>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 1.4K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 90</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 10</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7489940379731496198" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7489940379731496198" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/making-xbox360.jpg" alt="Miniatura" class="video-thumbnail">
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Making Off Xbox360</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">3D Modeling</span>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">Making Off Xbox360</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">3D Modeling</span>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 48.6K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 5.9K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 850</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7280254896513830149" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7280254896513830149" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                 </div>
@@ -582,81 +572,86 @@
 
                 <!-- CATEGORÍA: STORYTELLING -->
                 <div class="row mb-3">
-                    <div class="col-12 border-start border-info border-3 ps-3 ms-2 ms-md-0">
-                        <h2 class="category-title text-info text-uppercase m-0">
-                            <i class="bi bi-chat-left-heart me-2"></i>Storytelling
+                    <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0">
+                        <h2 class="category-title text-uppercase m-0" style="color: var(--cat-story); border-color: var(--cat-story) !important;">
+                            <i class="bi bi-book-half me-2"></i>Storytelling
                         </h2>
                     </div>
                 </div>
 
-                <div class="row g-3 row-cols-2 row-cols-md-3 row-cols-lg-5">
+                <div class="row g-3 row-cols-2 row-cols-md-3 row-cols-lg-4">
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/desarrollando-juego.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 bg-dark bg-opacity-75 p-1 w-100 text-center text-truncate">#4 Editado</span>
+                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto IV</span>
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">¡Estoy desarrollando un juego!</h3>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">¡Estoy desarrollando un juego de Halo!</h3>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 98.3K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 17.6K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 3.6K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7331067339615554821" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7331067339615554821" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/whatif-infinite.jpg" alt="Miniatura" class="video-thumbnail">
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">What If?</h3>
-                            <span class="video-title-secondary text-uppercase d-block text-truncate">Halo Infinite</span>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">What If?</h3>
+                            <span class="video-title-secondary text-uppercase d-block mb-2">Halo Infinite</span>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 97.2K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 14.3K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 2.3K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7334050693365484806" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7334050693365484806" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/diezmil-votos.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 bg-dark bg-opacity-75 p-1 w-100 text-center text-truncate">★ Top 2</span>
+                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Métrica Oro • Top 2</span>
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">Más de 10,000 votaron</h3>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">Más de 10,000 votaron</h3>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 413.4K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 65.1K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 7.3K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7266153066880191749" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7266153066880191749" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/game-favorito.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 bg-dark bg-opacity-75 p-1 w-100 text-center text-truncate">★ Top 1</span>
+                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Métrica Oro • Top 1</span>
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">¿Cuál es tu videojuego favorito?</h3>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">¿Cuál es tu videojuego favorito?</h3>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 519.7K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 68.9K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 6.5K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7265039706105072902" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7265039706105072902" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="portfolio-card h-100 d-flex flex-column p-2">
+                        <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/quiero-animador.jpg" alt="Miniatura" class="video-thumbnail">
                             </div>
-                            <h3 class="video-title-primary text-uppercase m-0 text-truncate">¡Quiero ser animador!</h3>
-                            <div class="d-flex flex-wrap gap-1 mt-2 mb-2">
+                            <h3 class="video-title-primary text-uppercase m-0 mb-2">¡Quiero ser animador!</h3>
+                            <div class="metric-group mb-3">
                                 <span class="metric-btn btn-views"><i class="bi bi-eye"></i> 57.3K</span>
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 9.5K</span>
+                                <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 1K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7269852838048681221" target="_blank" class="btn btn-xs btn-outline-info w-100 mt-auto text-uppercase py-1" style="font-size:0.7rem;"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7269852838048681221" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
                         </div>
                     </div>
                 </div>
@@ -668,9 +663,9 @@
     <footer class="container text-center py-4 border-top border-secondary">
         <div class="row justify-content-center mb-3">
             <div class="col-12 d-flex flex-wrap justify-content-center gap-3">
-                <a href="https://www.artstation.com/daniel3436" target="_blank" class="btn btn-sm btn-outline-info text-uppercase fw-semibold tracking-wider px-3" style="font-size: 0.75rem;">ArtStation</a>
-                <a href="https://www.tiktok.com/@reach_343" target="_blank" class="btn btn-sm btn-outline-info text-uppercase fw-semibold tracking-wider px-3" style="font-size: 0.75rem;">TikTok</a>
-                <a href="https://drive.google.com/uc?export=download&id=1FCqv2ly5UFlFghwkSrNQEAzZUncCJSUa" target="_blank" class="btn btn-sm btn-info text-dark text-uppercase fw-bold tracking-wider px-3" style="font-size: 0.75rem;">Descargar CV</a>
+                <a href="https://www.artstation.com/daniel3436" target="_blank" class="btn btn-sm btn-outline-secondary text-uppercase fw-semibold tracking-wider px-3" style="font-size: 0.75rem;">ArtStation</a>
+                <a href="https://www.tiktok.com/@reach_343" target="_blank" class="btn btn-sm btn-outline-secondary text-uppercase fw-semibold tracking-wider px-3" style="font-size: 0.75rem;">TikTok</a>
+                <a href="https://drive.google.com/uc?export=download&id=1FCqv2ly5UFlFghwkSrNQEAzZUncCJSUa" target="_blank" class="btn btn-sm btn-secondary text-dark text-uppercase fw-bold tracking-wider px-3" style="font-size: 0.75rem;">Descargar CV</a>
             </div>
         </div>
         <p class="mb-0 text-muted small">&copy; 2026 Daniel Jauregui. Todos los derechos reservados.</p>
