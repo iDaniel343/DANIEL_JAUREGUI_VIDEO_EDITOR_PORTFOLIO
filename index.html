@@ -20,7 +20,7 @@
             --metric-likes: #ff4d6d;
             --metric-favs: #ffb703;
             
-            /* Nueva paleta de colores corregida */
+            /* Paleta cromática consolidada */
             --cat-metrics: #ffb703;
             --cat-tech: #e63946;
             --cat-promo: #a2d2ff;
@@ -92,9 +92,7 @@
         .btn-likes { color: var(--metric-likes); border: 1px solid rgba(255, 77, 109, 0.15); }
         .btn-favs { color: var(--metric-favs); border: 1px solid rgba(255, 183, 3, 0.15); }
         
-        /* Marca del top en la base de la miniatura */
         .highlight-tag {
-            color: #ffffff;
             font-weight: 700;
             text-transform: uppercase;
             font-size: 0.68rem;
@@ -116,6 +114,14 @@
             color: var(--accent-gray-light);
             font-weight: 400;
             line-height: 1.3;
+        }
+        
+        /* Botones de acción optimizados */
+        .btn-action-master {
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
         }
         
         @media (min-width: 992px) {
@@ -145,17 +151,16 @@
                 <div class="row mb-3">
                     <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0" style="border-color: var(--cat-metrics) !important;">
                         <h2 class="category-title text-uppercase m-0" style="color: var(--cat-metrics);">
-                            <i class="bi bi-crown-fill me-2"></i>Destacados: Mejores Métricas
+                            <i class="bi bi-star-fill me-2"></i>Destacados: Mejores Métricas
                         </h2>
                     </div>
                 </div>
 
                 <div class="row g-3 mb-5 row-cols-2 row-cols-md-3 row-cols-lg-4">
-                    <!-- Top 1 -->
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/game-favorito.jpg" alt="Miniatura Videojuego Favorito" class="video-thumbnail">
+                                <img src="img/game-favorito.jpg" alt="Miniatura" class="video-thumbnail">
                                 <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">Top 1 en Rendimiento</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">¿Cuál es tu videojuego favorito?</h3>
@@ -164,14 +169,13 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 68.9K</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 6.5K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7265039706105072902" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7265039706105072902" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
-                    <!-- Top 2 -->
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/diezmil-votos.jpg" alt="Miniatura Más de 10k Votaron" class="video-thumbnail">
+                                <img src="img/diezmil-votos.jpg" alt="Miniatura" class="video-thumbnail">
                                 <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">Top 2 en Rendimiento</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Más de 10,000 votaron</h3>
@@ -180,14 +184,13 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 65.1K</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 7.3K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7266153066880191749" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7266153066880191749" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
-                    <!-- Top 3 -->
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/arma-iconica.jpg" alt="Miniatura Arma Icónica" class="video-thumbnail">
+                                <img src="img/arma-iconica.jpg" alt="Miniatura" class="video-thumbnail">
                                 <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">Top 3 en Rendimiento</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">¿Cuál es el arma más icónica de los videojuegos?</h3>
@@ -197,14 +200,13 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 48.4K</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 6.6K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7261705288275725574" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7261705288275725574" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
-                    <!-- Top 4 -->
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/mochila-legendaria.jpg" alt="Miniatura Mochila Halo" class="video-thumbnail">
+                                <img src="img/mochila-legendaria.jpg" alt="Miniatura" class="video-thumbnail">
                                 <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">Top 4 en Rendimiento</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Mochila Legendaria Halo</h3>
@@ -214,7 +216,7 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 6.1K</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 1.4K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7602751958671265044" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7602751958671265044" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                 </div>
@@ -230,11 +232,10 @@
                 </div>
 
                 <div class="row g-3 mb-5 row-cols-2 row-cols-md-3 row-cols-lg-4">
-                    <!-- Top 1 Edición -->
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/niveles-halo3.jpg" alt="Miniatura Niveles Halo 3" class="video-thumbnail">
+                                <img src="img/niveles-halo3.jpg" alt="Miniatura" class="video-thumbnail">
                                 <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#1 en Edición</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">El diseño de niveles de Halo 3</h3>
@@ -243,14 +244,13 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 789</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 140</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7597982436563193109" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7597982436563193109" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
-                    <!-- Top 2 Edición -->
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/armamento-ma40.jpg" alt="Miniatura Armamento MA40" class="video-thumbnail">
+                                <img src="img/armamento-ma40.jpg" alt="Miniatura" class="video-thumbnail">
                                 <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#2 en Edición</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Analizando armamento de videojuegos</h3>
@@ -261,16 +261,15 @@
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 300</span>
                             </div>
                             <div class="d-flex gap-2 mt-auto">
-                                <a href="https://drive.google.com/file/d/1vE7LOonJuOObFQ-dKaF-z5FPaMoTrjKm/view?usp=sharing" target="_blank" class="btn btn-sm btn-light w-50 text-uppercase py-2"><i class="bi bi-cloud-arrow-down-fill me-1"></i>Drive</a>
-                                <a href="https://www.tiktok.com/@reach_343/video/7627090054292262164" target="_blank" class="btn btn-sm btn-outline-secondary w-50 text-uppercase py-2"><i class="bi bi-tiktok"></i></a>
+                                <a href="https://drive.google.com/file/d/1vE7LOonJuOObFQ-dKaF-z5FPaMoTrjKm/view?usp=sharing" target="_blank" class="btn btn-sm btn-light btn-action-master w-50 text-uppercase py-2"><i class="bi bi-play-btn-fill me-2"></i>Ver</a>
+                                <a href="https://www.tiktok.com/@reach_343/video/7627090054292262164" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-50 text-uppercase py-2"><i class="bi bi-tiktok"></i></a>
                             </div>
                         </div>
                     </div>
-                    <!-- Top 3 Edición -->
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/mecanicas-juego.jpg" alt="Miniatura Mecánicas Juego" class="video-thumbnail">
+                                <img src="img/mecanicas-juego.jpg" alt="Miniatura" class="video-thumbnail">
                                 <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#3 en Edición</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Diseñando mecánicas de mi juego de Halo</h3>
@@ -280,14 +279,13 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 4.1K</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 700</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7614236896688114964" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7614236896688114964" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
-                    <!-- Top 4 Edición -->
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/desarrollando-juego.jpg" alt="Miniatura Juego Halo" class="video-thumbnail">
+                                <img src="img/desarrollando-juego.jpg" alt="Miniatura" class="video-thumbnail">
                                 <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#4 en Edición</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">¡Estoy desarrollando un juego de Halo!</h3>
@@ -296,7 +294,7 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 17.6K</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 3.6K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7331067339615554821" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7331067339615554821" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                 </div>
@@ -315,7 +313,7 @@
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/mochila-legendaria.jpg" alt="Mochila Legendaria" class="video-thumbnail">
+                                <img src="img/mochila-legendaria.jpg" alt="Mochila" class="video-thumbnail">
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Mochila Legendaria Halo</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Yadatex</span>
@@ -324,26 +322,26 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 6.1K</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 1.4K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7602751958671265044" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7602751958671265044" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/mochila-batman.jpg" alt="Mochila Batman" class="video-thumbnail">
+                                <img src="img/mochila-batman.jpg" alt="Mochila" class="video-thumbnail">
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Mochila Batman Classic</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Yadatex</span>
                             <div class="my-2 mb-3">
                                 <span class="badge border border-secondary text-uppercase p-2 w-100 text-wrap text-start text-secondary" style="font-size:0.65rem; line-height: 1.3;"><i class="bi bi-clock-history me-1"></i>Pendiente de subir a la espera de restock</span>
                             </div>
-                            <a href="https://drive.google.com/file/d/1yOvNS_5IASmmTU30k5EOn_Ikfx2V7fCC/view?usp=sharing" target="_blank" class="btn btn-sm btn-light w-100 mt-auto text-uppercase py-2"><i class="bi bi-cloud-arrow-down-fill me-2"></i>Master Drive</a>
+                            <a href="https://drive.google.com/file/d/1yOvNS_5IASmmTU30k5EOn_Ikfx2V7fCC/view?usp=sharing" target="_blank" class="btn btn-sm btn-light btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-play-btn-fill me-2"></i>Ver</a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/mochila-combat.jpg" alt="Mochila Combat" class="video-thumbnail">
+                                <img src="img/mochila-combat.jpg" alt="Mochila" class="video-thumbnail">
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Mochila Combat 117 Halo</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Yadatex</span>
@@ -352,20 +350,20 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 1.2K</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 330</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7609057845501365525" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7609057845501365525" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/mochila-zoro.jpg" alt="Mochila Zoro" class="video-thumbnail">
+                                <img src="img/mochila-zoro.jpg" alt="Mochila" class="video-thumbnail">
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Mochila Zoro Premium One Piece</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Yadatex</span>
                             <div class="my-2 mb-3">
                                 <span class="badge border border-secondary text-uppercase p-2 w-100 text-wrap text-start text-secondary" style="font-size:0.65rem; line-height: 1.3;"><i class="bi bi-clock-history me-1"></i>Pendiente de subir a la espera de restock</span>
                             </div>
-                            <a href="https://drive.google.com/file/d/1J0rKsrKwqFjSC1HAXM4cyme88xzVg9hS/view?usp=drive_link" target="_blank" class="btn btn-sm btn-light w-100 mt-auto text-uppercase py-2"><i class="bi bi-cloud-arrow-down-fill me-2"></i>Master Drive</a>
+                            <a href="https://drive.google.com/file/d/1J0rKsrKwqFjSC1HAXM4cyme88xzVg9hS/view?usp=drive_link" target="_blank" class="btn btn-sm btn-light btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-play-btn-fill me-2"></i>Ver</a>
                         </div>
                     </div>
                 </div>
@@ -375,7 +373,7 @@
                 <div class="row mb-3">
                     <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0" style="border-color: var(--cat-analysis) !important;">
                         <h2 class="category-title text-uppercase m-0" style="color: var(--cat-analysis);">
-                            <i class="bi bi-cpu me-2"></i>Análisis y Tutoriales
+                            <i class="bi bi-search-heart me-2"></i>Análisis y Tutoriales
                         </h2>
                     </div>
                 </div>
@@ -384,7 +382,7 @@
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/niveles-halo3.jpg" alt="Miniatura Niveles" class="video-thumbnail">
+                                <img src="img/niveles-halo3.jpg" alt="Miniatura" class="video-thumbnail">
                                 <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#1 en Edición</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">El diseño de niveles de Halo 3</h3>
@@ -393,13 +391,13 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 789</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 140</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7597982436563193109" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7597982436563193109" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/disenos-markv.jpg" alt="Miniatura Mark V" class="video-thumbnail">
+                                <img src="img/disenos-markv.jpg" alt="Miniatura" class="video-thumbnail">
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Calificando diseños</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Halo: Mark V</span>
@@ -408,13 +406,13 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 789</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 140</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7597982436563193109" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7597982436563193109" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/tiktok-shop.jpg" alt="Miniatura TikTok Shop" class="video-thumbnail">
+                                <img src="img/tiktok-shop.jpg" alt="Miniatura" class="video-thumbnail">
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">¿Cómo hacer videos para TikTok Shop?</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Tutorial</span>
@@ -423,13 +421,13 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 165</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 40</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7604216964415786261" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7604216964415786261" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/mecanicas-juego.jpg" alt="Miniatura Mecánicas" class="video-thumbnail">
+                                <img src="img/mecanicas-juego.jpg" alt="Miniatura" class="video-thumbnail">
                                 <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#3 en Edición</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Diseñando mecánicas de mi juego de Halo</h3>
@@ -439,13 +437,13 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 4.1K</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 700</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7614236896688114964" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7614236896688114964" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/armamento-ma40.jpg" alt="Miniatura MA40" class="video-thumbnail">
+                                <img src="img/armamento-ma40.jpg" alt="Miniatura" class="video-thumbnail">
                                 <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#2 en Edición</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Analizando armamento de videojuegos</h3>
@@ -456,15 +454,15 @@
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 300</span>
                             </div>
                             <div class="d-flex gap-2 mt-auto">
-                                <a href="https://drive.google.com/file/d/1vE7LOonJuOObFQ-dKaF-z5FPaMoTrjKm/view?usp=sharing" target="_blank" class="btn btn-sm btn-light w-50 text-uppercase py-2"><i class="bi bi-cloud-arrow-down-fill me-1"></i>Drive</a>
-                                <a href="https://www.tiktok.com/@reach_343/video/7627090054292262164" target="_blank" class="btn btn-sm btn-outline-secondary w-50 text-uppercase py-2"><i class="bi bi-tiktok"></i></a>
+                                <a href="https://drive.google.com/file/d/1vE7LOonJuOObFQ-dKaF-z5FPaMoTrjKm/view?usp=sharing" target="_blank" class="btn btn-sm btn-light btn-action-master w-50 text-uppercase py-2"><i class="bi bi-play-btn-fill me-2"></i>Ver</a>
+                                <a href="https://www.tiktok.com/@reach_343/video/7627090054292262164" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-50 text-uppercase py-2"><i class="bi bi-tiktok"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
-                                <img src="img/tienda-infinite.jpg" alt="Miniatura Tienda" class="video-thumbnail">
+                                <img src="img/tienda-infinite.jpg" alt="Miniatura" class="video-thumbnail">
                                 <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#5 en Edición</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Mejorando la tienda de Halo Infinite</h3>
@@ -473,7 +471,7 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 1.2K</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 800</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7627090054292262164" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7627090054292262164" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                 </div>
@@ -501,7 +499,7 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 48.4K</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 6.6K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7261705288275725574" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7261705288275725574" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                     <div class="col">
@@ -516,7 +514,7 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 288</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 30</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7621887438042025236" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7621887438042025236" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                     <div class="col">
@@ -531,7 +529,7 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 818</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 40</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7489161446740249861" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7489161446740249861" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                     <div class="col">
@@ -546,7 +544,7 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 90</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 10</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7489940379731496198" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7489940379731496198" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                     <div class="col">
@@ -561,7 +559,7 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 5.9K</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 850</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7280254896513830149" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7280254896513830149" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                 </div>
@@ -589,7 +587,7 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 17.6K</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 3.6K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7331067339615554821" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7331067339615554821" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                     <div class="col">
@@ -604,7 +602,7 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 14.3K</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 2.3K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7334050693365484806" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7334050693365484806" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                     <div class="col">
@@ -619,7 +617,7 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 65.1K</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 7.3K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7266153066880191749" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7266153066880191749" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                     <div class="col">
@@ -634,7 +632,7 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 68.9K</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 6.5K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7265039706105072902" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7265039706105072902" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                     <div class="col">
@@ -648,7 +646,7 @@
                                 <span class="metric-btn btn-likes"><i class="bi bi-heart"></i> 9.5K</span>
                                 <span class="metric-btn btn-favs"><i class="bi bi-bookmark-heart"></i> 1K</span>
                             </div>
-                            <a href="https://www.tiktok.com/@reach_343/video/7269852838048681221" target="_blank" class="btn btn-sm btn-outline-secondary w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver Metraje</a>
+                            <a href="https://www.tiktok.com/@reach_343/video/7269852838048681221" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
                 </div>
