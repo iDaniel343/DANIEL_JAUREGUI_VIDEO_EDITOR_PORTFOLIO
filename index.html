@@ -20,13 +20,15 @@
             --metric-likes: #ff4d6d;
             --metric-favs: #ffb703;
             
-            /* Paleta cromática consolidada */
-            --cat-metrics: #ffb703;
-            --cat-tech: #e63946;
-            --cat-promo: #a2d2ff;
-            --cat-analysis: #606c38;
-            --cat-film: #7209b7;
-            --cat-story: #f77f00;
+            /* Paleta normalizada en brillo (Mismo Brillo/Saturación, variando HUE) */
+            --cat-metrics: #ffb703; /* Amarillo Oro */
+            --cat-tech: #ff3344;    /* Rojo Vibrante */
+            --cat-promo: #33b5ff;   /* Celeste Claro Fijo */
+            
+            /* Tonos secundarios específicos */
+            --cat-analysis: #606c38; /* Olivo */
+            --cat-film: #9d4edd;     /* Nuevo Purpura Amatista */
+            --cat-story: #f77f00;    /* Naranja */
         }
         body {
             font-family: 'Roboto', sans-serif;
@@ -92,15 +94,26 @@
         .btn-likes { color: var(--metric-likes); border: 1px solid rgba(255, 77, 109, 0.15); }
         .btn-favs { color: var(--metric-favs); border: 1px solid rgba(255, 183, 3, 0.15); }
         
+        /* Estilos de las etiquetas de los tops en la base */
         .highlight-tag {
             font-weight: 700;
             text-transform: uppercase;
             font-size: 0.68rem;
             letter-spacing: 1px;
-            display: inline-block;
-            background: var(--metric-favs);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
             color: #000000;
-            padding: 4px 8px;
+            padding: 4px 10px;
+            border-radius: 0 4px 0 0;
+        }
+        .tag-metrics {
+            background: var(--cat-metrics);
+            color: #000000;
+        }
+        .tag-tech {
+            background: var(--cat-tech);
+            color: #ffffff;
         }
         
         .video-title-primary {
@@ -116,7 +129,6 @@
             line-height: 1.3;
         }
         
-        /* Botones de acción optimizados */
         .btn-action-master {
             font-size: 0.82rem;
             font-weight: 700;
@@ -151,17 +163,18 @@
                 <div class="row mb-3">
                     <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0" style="border-color: var(--cat-metrics) !important;">
                         <h2 class="category-title text-uppercase m-0" style="color: var(--cat-metrics);">
-                            <i class="bi bi-star-fill me-2"></i>Destacados: Mejores Métricas
+                            <i class="bi bi-star-fill me-2"></i>Videos con las mejores metricas
                         </h2>
                     </div>
                 </div>
 
                 <div class="row g-3 mb-5 row-cols-2 row-cols-md-3 row-cols-lg-4">
+                    <!-- Top 1 -->
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/game-favorito.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">Top 1 en Rendimiento</span>
+                                <span class="highlight-tag tag-metrics position-absolute bottom-0 start-0"><i class="bi bi-star-fill"></i> TOP 1</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">¿Cuál es tu videojuego favorito?</h3>
                             <div class="metric-group mb-3">
@@ -172,11 +185,12 @@
                             <a href="https://www.tiktok.com/@reach_343/video/7265039706105072902" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
+                    <!-- Top 2 -->
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/diezmil-votos.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">Top 2 en Rendimiento</span>
+                                <span class="highlight-tag tag-metrics position-absolute bottom-0 start-0"><i class="bi bi-star-fill"></i> TOP 2</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Más de 10,000 votaron</h3>
                             <div class="metric-group mb-3">
@@ -187,11 +201,12 @@
                             <a href="https://www.tiktok.com/@reach_343/video/7266153066880191749" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
+                    <!-- Top 3 -->
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/arma-iconica.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">Top 3 en Rendimiento</span>
+                                <span class="highlight-tag tag-metrics position-absolute bottom-0 start-0"><i class="bi bi-star-fill"></i> TOP 3</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">¿Cuál es el arma más icónica de los videojuegos?</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Halo M6D</span>
@@ -203,11 +218,12 @@
                             <a href="https://www.tiktok.com/@reach_343/video/7261705288275725574" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
+                    <!-- Top 4 -->
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/mochila-legendaria.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">Top 4 en Rendimiento</span>
+                                <span class="highlight-tag tag-metrics position-absolute bottom-0 start-0"><i class="bi bi-star-fill"></i> TOP 4</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Mochila Legendaria Halo</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Yadatex</span>
@@ -226,17 +242,18 @@
                 <div class="row mb-3">
                     <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0" style="border-color: var(--cat-tech) !important;">
                         <h2 class="category-title text-uppercase m-0" style="color: var(--cat-tech);">
-                            <i class="bi bi-film me-2"></i>Destacados: Postproducción y Edición Avanzada
+                            <i class="bi bi-film me-2"></i>Mis videos mejor editados
                         </h2>
                     </div>
                 </div>
 
                 <div class="row g-3 mb-5 row-cols-2 row-cols-md-3 row-cols-lg-4">
+                    <!-- Top 1 Edición -->
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/niveles-halo3.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#1 en Edición</span>
+                                <span class="highlight-tag tag-tech position-absolute bottom-0 start-0"><i class="bi bi-film"></i> TOP 1</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">El diseño de niveles de Halo 3</h3>
                             <div class="metric-group mb-3">
@@ -247,11 +264,12 @@
                             <a href="https://www.tiktok.com/@reach_343/video/7597982436563193109" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
+                    <!-- Top 2 Edición -->
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/armamento-ma40.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#2 en Edición</span>
+                                <span class="highlight-tag tag-tech position-absolute bottom-0 start-0"><i class="bi bi-film"></i> TOP 2</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Analizando armamento de videojuegos</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Halo: MA40 (Versión Extendida)</span>
@@ -266,11 +284,12 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Top 3 Edición -->
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/mecanicas-juego.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#3 en Edición</span>
+                                <span class="highlight-tag tag-tech position-absolute bottom-0 start-0"><i class="bi bi-film"></i> TOP 3</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Diseñando mecánicas de mi juego de Halo</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Inventario</span>
@@ -282,11 +301,12 @@
                             <a href="https://www.tiktok.com/@reach_343/video/7614236896688114964" target="_blank" class="btn btn-sm btn-outline-secondary btn-action-master w-100 mt-auto text-uppercase py-2"><i class="bi bi-tiktok me-2"></i>Ver</a>
                         </div>
                     </div>
+                    <!-- Top 4 Edición -->
                     <div class="col">
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/desarrollando-juego.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#4 en Edición</span>
+                                <span class="highlight-tag tag-tech position-absolute bottom-0 start-0"><i class="bi bi-film"></i> TOP 4</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">¡Estoy desarrollando un juego de Halo!</h3>
                             <div class="metric-group mb-3">
@@ -383,7 +403,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/niveles-halo3.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#1 en Edición</span>
+                                <span class="highlight-tag tag-tech position-absolute bottom-0 start-0"><i class="bi bi-film"></i> TOP 1</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">El diseño de niveles de Halo 3</h3>
                             <div class="metric-group mb-3">
@@ -428,7 +448,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/mecanicas-juego.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#3 en Edición</span>
+                                <span class="highlight-tag tag-tech position-absolute bottom-0 start-0"><i class="bi bi-film"></i> TOP 3</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Diseñando mecánicas de mi juego de Halo</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Inventario</span>
@@ -444,7 +464,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/armamento-ma40.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#2 en Edición</span>
+                                <span class="highlight-tag tag-tech position-absolute bottom-0 start-0"><i class="bi bi-film"></i> TOP 2</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Analizando armamento de videojuegos</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Halo: MA40</span>
@@ -463,7 +483,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/tienda-infinite.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#5 en Edición</span>
+                                <span class="highlight-tag tag-tech position-absolute bottom-0 start-0"><i class="bi bi-film"></i> TOP 5</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Mejorando la tienda de Halo Infinite</h3>
                             <div class="metric-group mb-3">
@@ -579,7 +599,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/desarrollando-juego.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#4 en Edición</span>
+                                <span class="highlight-tag tag-tech position-absolute bottom-0 start-0"><i class="bi bi-film"></i> TOP 4</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">¡Estoy desarrollando un juego de Halo!</h3>
                             <div class="metric-group mb-3">
@@ -609,7 +629,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/diezmil-votos.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">Top 2 en Rendimiento</span>
+                                <span class="highlight-tag tag-metrics position-absolute bottom-0 start-0"><i class="bi bi-star-fill"></i> TOP 2</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Más de 10,000 votaron</h3>
                             <div class="metric-group mb-3">
@@ -624,7 +644,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/game-favorito.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">Top 1 en Rendimiento</span>
+                                <span class="highlight-tag tag-metrics position-absolute bottom-0 start-0"><i class="bi bi-star-fill"></i> TOP 1</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">¿Cuál es tu videojuego favorito?</h3>
                             <div class="metric-group mb-3">
@@ -658,9 +678,9 @@
     <footer class="container text-center py-4 border-top border-secondary">
         <div class="row justify-content-center mb-3">
             <div class="col-12 d-flex flex-wrap justify-content-center gap-3">
-                <a href="https://www.artstation.com/daniel3436" target="_blank" class="btn btn-sm btn-outline-secondary text-uppercase fw-semibold tracking-wider px-3" style="font-size: 0.75rem;">ArtStation</a>
-                <a href="https://www.tiktok.com/@reach_343" target="_blank" class="btn btn-sm btn-outline-secondary text-uppercase fw-semibold tracking-wider px-3" style="font-size: 0.75rem;">TikTok</a>
-                <a href="https://drive.google.com/uc?export=download&id=1FCqv2ly5UFlFghwkSrNQEAzZUncCJSUa" target="_blank" class="btn btn-sm btn-secondary text-dark text-uppercase fw-bold tracking-wider px-3" style="font-size: 0.75rem;">Descargar CV</a>
+                <a href="https://www.artstation.com/daniel3436" target="_blank" class="btn btn-sm btn-outline-secondary text-uppercase fw-semibold tracking-wider px-4 py-2" style="font-size: 0.85rem;">ArtStation</a>
+                <a href="https://www.tiktok.com/@reach_343" target="_blank" class="btn btn-sm btn-outline-secondary text-uppercase fw-semibold tracking-wider px-4 py-2" style="font-size: 0.85rem;">TikTok</a>
+                <a href="https://drive.google.com/uc?export=download&id=1FCqv2ly5UFlFghwkSrNQEAzZUncCJSUa" target="_blank" class="btn btn-sm btn-secondary text-dark text-uppercase fw-bold tracking-wider px-4 py-2" style="font-size: 0.85rem;">Descargar CV</a>
             </div>
         </div>
         <p class="mb-0 text-muted small">&copy; 2026 Daniel Jauregui. Todos los derechos reservados.</p>
