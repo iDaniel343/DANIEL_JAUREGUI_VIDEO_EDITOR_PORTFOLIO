@@ -20,12 +20,12 @@
             --metric-likes: #ff4d6d;
             --metric-favs: #ffb703;
             
-            /* Colores distintivos por categoría */
+            /* Nueva paleta de colores corregida */
             --cat-metrics: #ffb703;
-            --cat-tech: #e9ecef;
-            --cat-promo: #00f5d4;
-            --cat-analysis: #06d6a0;
-            --cat-film: #b5179e;
+            --cat-tech: #e63946;
+            --cat-promo: #a2d2ff;
+            --cat-analysis: #606c38;
+            --cat-film: #7209b7;
             --cat-story: #f77f00;
         }
         body {
@@ -46,7 +46,6 @@
             font-weight: 700;
         }
         
-        /* Retícula optimizada a 4 columnas sin truncado */
         .portfolio-card {
             background: rgba(255,255,255,0.02);
             border: 1px solid rgba(255,255,255,0.06);
@@ -72,7 +71,6 @@
             object-fit: cover;
         }
         
-        /* Sistema triple de botones de métricas */
         .metric-group {
             display: flex;
             flex-wrap: wrap;
@@ -94,7 +92,7 @@
         .btn-likes { color: var(--metric-likes); border: 1px solid rgba(255, 77, 109, 0.15); }
         .btn-favs { color: var(--metric-favs); border: 1px solid rgba(255, 183, 3, 0.15); }
         
-        /* Condecoraciones superiores en amarillo */
+        /* Marca del top en la base de la miniatura */
         .highlight-tag {
             color: #ffffff;
             font-weight: 700;
@@ -104,8 +102,7 @@
             display: inline-block;
             background: var(--metric-favs);
             color: #000000;
-            padding: 2px 8px;
-            border-radius: 0 0 4px 4px;
+            padding: 4px 8px;
         }
         
         .video-title-primary {
@@ -144,7 +141,7 @@
         <div class="row justify-content-center">
             <div class="col-12 col-xl-11">
 
-                <!-- SECCIÓN: MÁXIMO RENDIMIENTO (4 COLUMNAS) -->
+                <!-- SECCIÓN: MÁXIMO RENDIMIENTO -->
                 <div class="row mb-3">
                     <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0" style="border-color: var(--cat-metrics) !important;">
                         <h2 class="category-title text-uppercase m-0" style="color: var(--cat-metrics);">
@@ -159,7 +156,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/game-favorito.jpg" alt="Miniatura Videojuego Favorito" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Métrica Oro • Top 1</span>
+                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">Top 1 en Rendimiento</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">¿Cuál es tu videojuego favorito?</h3>
                             <div class="metric-group mb-3">
@@ -175,7 +172,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/diezmil-votos.jpg" alt="Miniatura Más de 10k Votaron" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Métrica Oro • Top 2</span>
+                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">Top 2 en Rendimiento</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Más de 10,000 votaron</h3>
                             <div class="metric-group mb-3">
@@ -191,7 +188,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/arma-iconica.jpg" alt="Miniatura Arma Icónica" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Métrica Oro • Top 3</span>
+                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">Top 3 en Rendimiento</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">¿Cuál es el arma más icónica de los videojuegos?</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Halo M6D</span>
@@ -208,7 +205,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/mochila-legendaria.jpg" alt="Miniatura Mochila Halo" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Métrica Oro • Top 4</span>
+                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">Top 4 en Rendimiento</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Mochila Legendaria Halo</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Yadatex</span>
@@ -223,7 +220,7 @@
                 </div>
 
 
-                <!-- SECCIÓN: EXCELENCIA TÉCNICA (4 COLUMNAS) -->
+                <!-- SECCIÓN: EXCELENCIA TÉCNICA -->
                 <div class="row mb-3">
                     <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0" style="border-color: var(--cat-tech) !important;">
                         <h2 class="category-title text-uppercase m-0" style="color: var(--cat-tech);">
@@ -238,7 +235,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/niveles-halo3.jpg" alt="Miniatura Niveles Halo 3" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto I</span>
+                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#1 en Edición</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">El diseño de niveles de Halo 3</h3>
                             <div class="metric-group mb-3">
@@ -254,7 +251,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/armamento-ma40.jpg" alt="Miniatura Armamento MA40" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto II</span>
+                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#2 en Edición</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Analizando armamento de videojuegos</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Halo: MA40 (Versión Extendida)</span>
@@ -274,7 +271,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/mecanicas-juego.jpg" alt="Miniatura Mecánicas Juego" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto III</span>
+                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#3 en Edición</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Diseñando mecánicas de mi juego de Halo</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Inventario</span>
@@ -291,7 +288,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/desarrollando-juego.jpg" alt="Miniatura Juego Halo" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto IV</span>
+                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#4 en Edición</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">¡Estoy desarrollando un juego de Halo!</h3>
                             <div class="metric-group mb-3">
@@ -338,7 +335,7 @@
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Mochila Batman Classic</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Yadatex</span>
                             <div class="my-2 mb-3">
-                                <span class="badge border border-secondary text-uppercase p-2 w-100 text-wrap text-start text-secondary" style="font-size:0.65rem; line-height: 1.3;"><i class="bi bi-clock me-1"></i>Pendiente de subir a la espera de restock de inventario</span>
+                                <span class="badge border border-secondary text-uppercase p-2 w-100 text-wrap text-start text-secondary" style="font-size:0.65rem; line-height: 1.3;"><i class="bi bi-clock-history me-1"></i>Pendiente de subir a la espera de restock</span>
                             </div>
                             <a href="https://drive.google.com/file/d/1yOvNS_5IASmmTU30k5EOn_Ikfx2V7fCC/view?usp=sharing" target="_blank" class="btn btn-sm btn-light w-100 mt-auto text-uppercase py-2"><i class="bi bi-cloud-arrow-down-fill me-2"></i>Master Drive</a>
                         </div>
@@ -366,7 +363,7 @@
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Mochila Zoro Premium One Piece</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Yadatex</span>
                             <div class="my-2 mb-3">
-                                <span class="badge border border-secondary text-uppercase p-2 w-100 text-wrap text-start text-secondary" style="font-size:0.65rem; line-height: 1.3;"><i class="bi bi-clock me-1"></i>Pendiente de subir a la espera de restock de inventario</span>
+                                <span class="badge border border-secondary text-uppercase p-2 w-100 text-wrap text-start text-secondary" style="font-size:0.65rem; line-height: 1.3;"><i class="bi bi-clock-history me-1"></i>Pendiente de subir a la espera de restock</span>
                             </div>
                             <a href="https://drive.google.com/file/d/1J0rKsrKwqFjSC1HAXM4cyme88xzVg9hS/view?usp=drive_link" target="_blank" class="btn btn-sm btn-light w-100 mt-auto text-uppercase py-2"><i class="bi bi-cloud-arrow-down-fill me-2"></i>Master Drive</a>
                         </div>
@@ -376,8 +373,8 @@
 
                 <!-- CATEGORÍA: ANÁLISIS Y TUTORIALES -->
                 <div class="row mb-3">
-                    <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0">
-                        <h2 class="category-title text-uppercase m-0" style="color: var(--cat-analysis); border-color: var(--cat-analysis) !important;">
+                    <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0" style="border-color: var(--cat-analysis) !important;">
+                        <h2 class="category-title text-uppercase m-0" style="color: var(--cat-analysis);">
                             <i class="bi bi-cpu me-2"></i>Análisis y Tutoriales
                         </h2>
                     </div>
@@ -388,7 +385,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/niveles-halo3.jpg" alt="Miniatura Niveles" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto I</span>
+                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#1 en Edición</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">El diseño de niveles de Halo 3</h3>
                             <div class="metric-group mb-3">
@@ -433,7 +430,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/mecanicas-juego.jpg" alt="Miniatura Mecánicas" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto III</span>
+                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#3 en Edición</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Diseñando mecánicas de mi juego de Halo</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Inventario</span>
@@ -449,7 +446,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/armamento-ma40.jpg" alt="Miniatura MA40" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto II</span>
+                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#2 en Edición</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Analizando armamento de videojuegos</h3>
                             <span class="video-title-secondary text-uppercase d-block mb-2">Halo: MA40</span>
@@ -468,7 +465,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/tienda-infinite.jpg" alt="Miniatura Tienda" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto V</span>
+                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#5 en Edición</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Mejorando la tienda de Halo Infinite</h3>
                             <div class="metric-group mb-3">
@@ -484,8 +481,8 @@
 
                 <!-- CATEGORÍA: CINE Y ANIMACIÓN -->
                 <div class="row mb-3">
-                    <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0">
-                        <h2 class="category-title text-uppercase m-0" style="color: var(--cat-film); border-color: var(--cat-film) !important;">
+                    <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0" style="border-color: var(--cat-film) !important;">
+                        <h2 class="category-title text-uppercase m-0" style="color: var(--cat-film);">
                             <i class="bi bi-camera-reels-fill me-2"></i>Cine y Animación
                         </h2>
                     </div>
@@ -572,8 +569,8 @@
 
                 <!-- CATEGORÍA: STORYTELLING -->
                 <div class="row mb-3">
-                    <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0">
-                        <h2 class="category-title text-uppercase m-0" style="color: var(--cat-story); border-color: var(--cat-story) !important;">
+                    <div class="col-12 border-start border-3 ps-3 ms-2 ms-md-0" style="border-color: var(--cat-story) !important;">
+                        <h2 class="category-title text-uppercase m-0" style="color: var(--cat-story);">
                             <i class="bi bi-book-half me-2"></i>Storytelling
                         </h2>
                     </div>
@@ -584,7 +581,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/desarrollando-juego.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Master Técnico • Puesto IV</span>
+                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">#4 en Edición</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">¡Estoy desarrollando un juego de Halo!</h3>
                             <div class="metric-group mb-3">
@@ -614,7 +611,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/diezmil-votos.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Métrica Oro • Top 2</span>
+                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">Top 2 en Rendimiento</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">Más de 10,000 votaron</h3>
                             <div class="metric-group mb-3">
@@ -629,7 +626,7 @@
                         <div class="portfolio-card h-100 d-flex flex-column p-3">
                             <div class="thumbnail-container mb-2">
                                 <img src="img/game-favorito.jpg" alt="Miniatura" class="video-thumbnail">
-                                <span class="highlight-tag position-absolute top-0 start-50 translate-middle-x">Métrica Oro • Top 1</span>
+                                <span class="highlight-tag position-absolute bottom-0 start-0 w-100 text-center">Top 1 en Rendimiento</span>
                             </div>
                             <h3 class="video-title-primary text-uppercase m-0 mb-2">¿Cuál es tu videojuego favorito?</h3>
                             <div class="metric-group mb-3">
